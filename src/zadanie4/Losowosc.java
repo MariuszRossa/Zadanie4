@@ -13,9 +13,15 @@ public class Losowosc {
     private int losowaX, losowaY, losLot;
     private Random rand = new Random();
     
+    /**
+     *
+     */
     public Losowosc() {  
     }
     
+    /**
+     *
+     */
     public void odswiezLos(){
         ///maksymalny zakres x "1410", y "535"       
         losowaX = rand.nextInt(1410) + 1;
@@ -23,14 +29,26 @@ public class Losowosc {
         losLot = rand.nextInt(4);
     }
 
+    /**
+     *
+     * @return
+     */
     public int getLosLot() {
         return losLot;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getLosowaX() {
         return losowaX;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getLosowaY() {
         return losowaY;
     }

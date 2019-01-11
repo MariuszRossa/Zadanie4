@@ -63,18 +63,34 @@ public class Zadanie4 extends JFrame implements ActionListener{
                 {"180", "250","150"},
                 {"1410", "535","150"}};
 
+    /**
+     *
+     * @param model
+     */
     public void setModel(DefaultTableModel model) {
         this.model = model;
     }
 
+    /**
+     *
+     * @return
+     */
     public DefaultTableModel getModel() {
         return model;
     }
     
+    /**
+     *
+     * @return
+     */
     public DefaultTableModel getModel2() {
         return model2;
     }
 
+    /**
+     *
+     * @param model2
+     */
     public void setModel2(DefaultTableModel model2) {
         this.model2 = model2;
     }
@@ -98,11 +114,9 @@ public class Zadanie4 extends JFrame implements ActionListener{
             Wielowatkowosc R3 = new Wielowatkowosc(model, model2, 3);
             Wielowatkowosc R4 = new Wielowatkowosc(model, model2, 4);
 
-
- 
-
-
-    
+    /**
+     *
+     */
     public Zadanie4() {
         super("Samoloty");
         greenButton.addActionListener(this);
@@ -170,7 +184,7 @@ public class Zadanie4 extends JFrame implements ActionListener{
         //System.out.println("Current time" + System.currentTimeMillis());
     }
     /**
-     * @param args the command line arguments
+     * @param e
      */
     	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -205,7 +219,10 @@ public class Zadanie4 extends JFrame implements ActionListener{
                 }
 	}
     
-    
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
 
 

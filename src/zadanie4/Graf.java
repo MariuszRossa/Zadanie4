@@ -30,16 +30,32 @@ public class Graf extends JPanel{
 //    public Rysowanie(){
 //       int x[], int y[]
 //    }
+
+    /**
+     *
+     */
     public Graf(){
     }
     
+    /**
+     *
+     * @param mojmodel
+     * @param mojmodel2
+     * @param niebieski
+     * @param czerwony
+     */
     public Graf(DefaultTableModel mojmodel, DefaultTableModel mojmodel2, Color niebieski, Color czerwony){
          defmS = mojmodel;
          defmL = mojmodel2;
          kolWybor = niebieski;        
          kolWybor2 = czerwony;
     }
-         @Override
+
+    /**
+     *
+     * @param g
+     */
+    @Override
     protected void paintComponent(Graphics g) {
         int [] xKolo = new int [defmS.getRowCount()];
         int [] yKolo = new int [defmS.getRowCount()];

@@ -15,24 +15,46 @@ public class Ruch {
     private double d, x3, y3, r;
     private Boolean celLotu;
 
+    /**
+     *
+     * @return
+     */
     public Boolean getCelLotu() {
         return celLotu;
     }
 
+    /**
+     *
+     * @param celLotu
+     */
     public void setCelLotu(Boolean celLotu) {
         this.celLotu = celLotu;
     }
     private String celLotuKon, sprawdzenie= "tak";
+
+    /**
+     *
+     * @return
+     */
     public double getX3() {
         return x3;
     }
 
+    /**
+     *
+     * @return
+     */
     public double getY3() {
         return y3;
     }
     private DefaultTableModel samolot, lotnisko ;
     private int x1, x2, y1, y2, n =10,watek, paliwo, lotnLos;
 //    private String zajete;
+
+    /**
+     *
+     * @param paliwo
+     */
     public void setPaliwo(int paliwo) {
         this.paliwo = paliwo;
     }
@@ -44,16 +66,35 @@ public class Ruch {
 //    public void setLotnisko(DefaultTableModel lotnisko) {
 //        this.lotnisko = lotnisko;
 //    }
+
+    /**
+     *
+     * @return
+     */
     public int getX2() {
         return x2;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getY2() {
         return y2;
     }
+
+    /**
+     *
+     */
     public Ruch(){
     }
 
+    /**
+     *
+     * @param model1
+     * @param model2
+     * @param watekN
+     */
     public void Odswiez(DefaultTableModel model1, DefaultTableModel model2, int watekN){
         this.samolot = model1;
         this.lotnisko = model2;
@@ -88,12 +129,17 @@ public class Ruch {
 //        this.y2 = y2;
 //    }     DefaultTableModel defm
 
-
-
+    /**
+     *
+     * @param lotnLos
+     */
     public void setLotnLos(int lotnLos) {
         this.lotnLos = lotnLos;
     }
 
+    /**
+     *
+     */
     public void Lec () {
 
         if (Math.abs(x3 - x2)<11 && Math.abs(y3 - y2)<11){

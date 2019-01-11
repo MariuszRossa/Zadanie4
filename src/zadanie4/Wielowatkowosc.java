@@ -33,14 +33,20 @@ public class Wielowatkowosc implements Runnable {
    String aaa= "aaa";
    private boolean pauza = false;
 
+    /**
+     *
+     * @return
+     */
     public boolean isPauza() {
         return pauza;
     }
    
 private final Object pauseLock = new Object();
 
-
-
+    /**
+     *
+     * @param pauza
+     */
     public void setPauza(boolean pauza) {
         this.pauza = pauza;
     }
@@ -59,6 +65,10 @@ private final Object pauseLock = new Object();
         
    }
    // przyjac lot nastepnie przeslac go do tabeli i ponownie wywolac rysowanie 
+
+    /**
+     *
+     */
     @Override
    public void run() {
         System.out.println("Running " +  nazwaWatku );
@@ -96,13 +106,21 @@ private final Object pauseLock = new Object();
       }
       System.out.println("Thread " +  nazwaWatku + " exiting.");
    }
-   public void resume() {
+
+    /**
+     *
+     */
+    public void resume() {
         synchronized (pauseLock) {
         pauseLock.notifyAll(); // Unblocks thread
         pauza = false;
         }
    }
-   public void start () {
+
+    /**
+     *
+     */
+    public void start () {
       System.out.println("Starting " +  nazwaWatku );
       if (t == null) {
          t = new Thread(this);
